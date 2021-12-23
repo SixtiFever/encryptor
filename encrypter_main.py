@@ -10,6 +10,7 @@ import random
 
 cipher_array = ['a','b','c','d','e','f','g','h','i','j','k',
 'l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+cipher_array2 = cipher_array*2
 
 """ function to take input message, and scramble it """
 """ 1. take input message. Listify it.
@@ -21,16 +22,20 @@ cipher_array = ['a','b','c','d','e','f','g','h','i','j','k',
 def cipher(input_message: str) -> None:
     x = random.randint(2,6)
     encrypted_message = list()
-    listed_message = list(input_message)
+    listed_message = input_message
     for element in listed_message:
         if element in cipher_array:
             original_index = int(cipher_array.index(element))
             shift = original_index + x
-            encrypted_message.append(cipher_array[shift])
-    print(encrypted_message)
+            encrypted_message.append(cipher_array2[shift])
+        if element == " ":
+            encrypted_message.append(element)
+    return str(''.join(encrypted_message))
 
 
-cipher('a')
+def decipher()
+
+print(cipher('hello there'))
 
 
 
