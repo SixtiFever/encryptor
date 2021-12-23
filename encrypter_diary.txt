@@ -1,0 +1,9 @@
+Function is taking an input message
+The message is listified
+Each elements index is found, corresponding to the cipher array
+A key shift is created for the alphabetic substitution
+Encrypted message is created by appending from the cipher_array with an index of the [key_shift]
+
+Issue:
+- If key_shift > the range between the end of the cipher_array and the highest index element in the message
+    there runs into an IndexError: list index out of range
