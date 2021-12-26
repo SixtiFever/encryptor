@@ -1,9 +1,22 @@
-Function is taking an input message
-The message is listified
-Each elements index is found, corresponding to the cipher array
-A key shift is created for the alphabetic substitution
-Encrypted message is created by appending from the cipher_array with an index of the [key_shift]
+
+cipher()
+    Function is taking an input message
+    The message is listified
+    Each elements index is found, corresponding to the cipher array
+    A key shift is created for the alphabetic substitution
+    Encrypted message is created by appending from the cipher_array with an index of the [key_shift]
+
+de_cipher()
+    Takes ciphered message and listifies iteration
+    Reverses the cipher_array
+    Uses a for loop to grab each element of ciphered message, and find corresponding index in the reversed array
+    Apply key shift
+    Return de-ciphered message (use join to mutate list)
+
 
 Issue:
 - If key_shift > the range between the end of the cipher_array and the highest index element in the message
     there runs into an IndexError: list index out of range
+Solution:
+- Repeated the cipher array so indexing can run into the next iteration should the above issue occur.
+
