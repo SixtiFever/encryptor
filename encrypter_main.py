@@ -4,7 +4,9 @@ import random
 
 """ lists to accomodate alphabetic substitution via indexing """
 cipher_array = ['a','b','c','d','e','f','g','h','i','j','k',
-'l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+'l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1',
+'2','3','4','5','6','7','8','9', '\'','!','@','€','#','$','%','^','&',
+'*','(',')','\"',':',';','<',',','.','>','?','/']
 cipher_array2 = cipher_array*2
 
 """ key shift to create the randomly generate alphabetic substitution index """
@@ -59,7 +61,7 @@ def decipher(ciphred_message):
 
     
 
-a = cipher('Fuck off you fag')
+a = cipher('That\'s right!!!')
 
 print(a)
 print(decipher(a))
